@@ -28,7 +28,7 @@ VisualizeGames(10)
 VisualizeGames(20)
 ```
 
-## Simulate 50000 Games
+## Simulate 10000 Games
 
 ```{r}
 n <- 10000
@@ -37,7 +37,7 @@ VisualizeGames(n)
 
 
 ```{r}
-n.vals <- seq(10, 500, 2)
+n.vals <- seq(10, 1000, 2)
 p.hold <- c()
 p.switch <- c()
 
