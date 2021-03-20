@@ -27,9 +27,9 @@ VisualizeGames(10)
 VisualizeGames(20)
 ```
 
-## Simulate 1000 Games
+## Simulate 50000 Games
 
 ```{r}
-VisualizeGames(1000)
+VisualizeGames(50000)
 ```
 
