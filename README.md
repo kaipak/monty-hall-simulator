@@ -14,3 +14,5 @@ make the switch?
 ## Running the Simulator
 This repo consists of a script that runs the simulation and an R notebook where you can
 view results `simulator_nb.Rmd`. 
+
+![Example with n=10 simulations](https://github.com/kaipak/monty-hall-simulator/blob/main/images/ex_n10.png?raw=true)
