@@ -1,0 +1,35 @@
+---
+title: "R Notebook"
+author: "Kai Pak"
+output:
+  html_document:
+    df_print: paged
+---
+
+# The Monty-Hall Game Simulator!!!
+
+
+```{r}
+library(ggplot2)
+library(plotly)
+source("mh_sim.R")
+```
+
+## Simulate 10 Games
+
+```{r}
+VisualizeGames(10)
+```
+
+## Simulate 20
+
+```{r}
+VisualizeGames(20)
+```
+
+## Simulate 1000 Games
+
+```{r}
+VisualizeGames(1000)
+```
+
