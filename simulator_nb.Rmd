@@ -10,6 +10,7 @@ output:
 
 
 ```{r}
+library(reshape2)
 library(ggplot2)
 library(plotly)
 source("mh_sim.R")
@@ -30,6 +31,31 @@ VisualizeGames(20)
 ## Simulate 50000 Games
 
 ```{r}
-VisualizeGames(50000)
+n <- 10000
+VisualizeGames(n)
+```
+
+
+```{r}
+n.vals <- seq(10, 500, 2)
+p.hold <- c()
+p.switch <- c()
+
+for (n in n.vals) {
+  res.hold <- SimulateNGames(switch=FALSE, n=n)
+  res.switch <- SimulateNGames(switch=TRUE, n=n)
+  p.hold <- append(p.hold, sum(res.hold) / n)
+  p.switch <- append(p.switch, sum(res.switch) / n)
+}
+
+df.res <- data.frame(
+  "n" = n.vals, 
+  "hold" = p.hold,
+  "switch" = p.switch
+)
+df.res <- melt(df.res, id.vars = 'n', variable.name = "strategy")
+
+ggplot(df.res, aes(x=n, y=value, color=strategy)) +
+  geom_line()
 ```
 
